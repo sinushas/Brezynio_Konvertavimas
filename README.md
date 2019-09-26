@@ -1,2 +1,3 @@
 # Brezynio_Konvertavimas
-Programa skirta konvertuoti brėžyniams iš nuotraukų formato į AutoCAD formatą
+
+Python'u parašyta programa skirta konvertuoti brėžyniams iš įvairių nuotraukų formatų į AutoCAD formatą.
