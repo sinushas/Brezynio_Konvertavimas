@@ -2,12 +2,12 @@ import PIL  # pip install pillow
 import sdxf # pip install sdxf
 
 # Might want to use 'import argparse' to get arguments from command line
-input_image_path = 'input.png'
+input_image_path = '/home/sinushas/Downloads/Brezynio_Konvertavimas/input.png'
 # AutoCAD DXF (Drawing Interchange Format, or Drawing Exchange Format) 
 # is a CAD data file format developed by Autodesk[2] 
 # for enabling data interoperability between AutoCAD and other programs. 
 # https://en.wikipedia.org/wiki/AutoCAD_DXF
-output_path = 'output.dxf'
+output_path = '/home/sinushas/Downloads/Brezynio_Konvertavimas/output.dxf'
 image = PIL.Image.open(input_image_path)
 a = numpy.asarray(image)
 print('Shape:', a.shape)
