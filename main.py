@@ -1,20 +1,19 @@
 import argparse #Parser for command-line options, arguments and sub-commands
 import pytesseract #Python-tesseract is an optical character recognition (OCR) tool for python. That is, it will recognize and “read” the text embedded in images.
-import PIL  #Pillow library provides extensive file format support, an efficient internal representation, and fairly powerful image processing capabilities.
+import pillow_works  #Pillow library provides extensive file format support, an efficient internal representation, and fairly powerful image processing capabilities.
 import ezdxf #ezdxf is a Python interface to the DXF (drawing interchange file) format developed by Autodesk,
 #             it allows developers to read and modify existing DXF drawings or create new DXF drawings.
 import numpy #NumPy is the fundamental package for scientific computing with Python
-#import I0 #The io module provides Python’s main facilities for dealing with various types of I/O 
+
 
 # Might want to use 'import argparse' to get arguments from command line
-input_image_path = '/home/sinushas/Downloads/Brezynio_Konvertavimas/input.png'
+
 # AutoCAD DXF (Drawing Interchange Format, or Drawing Exchange Format) 
 # is a CAD data file format developed by Autodesk[2] 
 # for enabling data interoperability between AutoCAD and other programs. 
 # https://en.wikipedia.org/wiki/AutoCAD_DXF
-output_path = '/home/sinushas/Downloads/Brezynio_Konvertavimas/output.dxf'
-image = PIL.Image.open(input_image_path)
-print(image)
+
+
 a = numpy.asarray(image)
 print('Shape:', a.shape)
 
