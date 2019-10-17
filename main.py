@@ -1,5 +1,10 @@
-import PIL  # pip install pillow
-import sdxf # pip install sdxf
+import argparse #Parser for command-line options, arguments and sub-commands
+import pytesseract #Python-tesseract is an optical character recognition (OCR) tool for python. That is, it will recognize and “read” the text embedded in images.
+import PIL  #Pillow library provides extensive file format support, an efficient internal representation, and fairly powerful image processing capabilities.
+import ezdxf #ezdxf is a Python interface to the DXF (drawing interchange file) format developed by Autodesk,
+#             it allows developers to read and modify existing DXF drawings or create new DXF drawings.
+import numpy #NumPy is the fundamental package for scientific computing with Python
+#import I0 #The io module provides Python’s main facilities for dealing with various types of I/O 
 
 # Might want to use 'import argparse' to get arguments from command line
 input_image_path = '/home/sinushas/Downloads/Brezynio_Konvertavimas/input.png'
@@ -9,6 +14,7 @@ input_image_path = '/home/sinushas/Downloads/Brezynio_Konvertavimas/input.png'
 # https://en.wikipedia.org/wiki/AutoCAD_DXF
 output_path = '/home/sinushas/Downloads/Brezynio_Konvertavimas/output.dxf'
 image = PIL.Image.open(input_image_path)
+print(image)
 a = numpy.asarray(image)
 print('Shape:', a.shape)
 
@@ -16,15 +22,15 @@ print('Shape:', a.shape)
 
 
 # Create a drawing, we will add things to it
-drawing = sdxf.Drawing()
+drawing = ezdxf.Drawing()
 
 # In this block we are creating various objects and adding them to the drawing
 # Create text object at coordinates 3, 0, 1
-text = sdxf.Text('Hello World!', point=(3, 0, 1))
+text = ezdxf.Text('Hello World!', point=(3, 0, 1))
 # Add text to drawing
 drawing.append(text)
 # Same with line
-line = sdxf.Line(points=[(0,0,0), (1,1,1)])
+line = ezdxf.Line(points=[(0,0,0), (1,1,1)])
 drawing.append(line)
 
 # Finally, save file to path
