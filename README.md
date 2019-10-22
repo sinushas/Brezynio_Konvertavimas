@@ -1,18 +1,22 @@
-# Brezynio_Konvertavimas
+# Automatic Image Conversion to DXF
 
-## Antro lygio headingas
+Code written in Python to read .png image and transform it into AutoCAD readable format
 
-Python'u parašyta programa skirta konvertuoti brėžyniams iš įvairių nuotraukų formatų į AutoCAD formatą.
+## Objective:
 
-Tikslas:
-- Transform picture into monochrome.
-- Reading line lenght on the picture and drawing them into CAD file.
-- Reading measurements of the drawing and adding them to the CAD file.
+- Transform picture into monochrome;
+- Transform picture into array;
+- Convert Non-blank pixels into coordinates;
+- Connect the coordinates together to draw lines;
+- Read measurments and add them to the drawing;
+- Apply the measurments to the lines drawn (if possible)
 
-[Nuoroda](https://github.com/sinushas/Brezynio_Konvertavimas)
 
-Numeruotas sarasas:
+[Link to project](https://github.com/sinushas/Brezynio_Konvertavimas)
 
-1. 
-2. 
+Working functions:
+
+1. Transforming picture into monochrome
+2. Transforming picture into array of booleons
+3. Converting Non-Blank pixels into coordinates
 
